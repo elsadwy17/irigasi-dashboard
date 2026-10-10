@@ -7,27 +7,14 @@ use App\Http\Middleware\SimpleAuth;
 use App\Models\SensorData;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LoginController;
 
+Route::get('/login', [LoginController::class, 'showLogin'])
+    ->name('login');
 
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
+Route::post('/login', [LoginController::class, 'login']);
 
-Route::post('/login', function (Request $request) {
-    if (
-        $request->username === 'admin' &&
-        $request->password === '12345'
-    ) {
-        Session::put('logged_in', true);
-
-        return redirect('/dashboard');
-    }
-
-    return redirect()->back()->with(
-        'error',
-        'Username atau Password Salah!'
-    );
-});
+Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->name('dashboard')
