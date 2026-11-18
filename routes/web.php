@@ -9,10 +9,15 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 
+Route::get('/', function() {
+return redirect()->route('login');
+});
+
 Route::get('/login', [LoginController::class, 'showLogin'])
     ->name('login');
 
-Route::post('/login', [LoginController::class, 'login']);
+Route::post('/login', [LoginController::class, 'login'])
+    ->name('login.process');
 
 Route::post('/logout', [LoginController::class, 'logout']);
 
@@ -88,10 +93,5 @@ Route::get('/api/dummy', function () {
         "debit_air" => rand(0, 10),
         "valve_status" => rand(0, 1)
     ];
-});
-
-Route::post('/logout', function() {
-    Session::forget('logged_in');
-    return redirect('/login');
 });
 

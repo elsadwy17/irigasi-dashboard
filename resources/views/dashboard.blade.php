@@ -25,13 +25,13 @@
     </style>
 </head>
 
-<body>
+<body class="min-h-screen w-full overflow-x-hidden">
 
-<div class="flex">
+<div class="flex min-h-screen w-full">
 
     @include('sidebar')
 
-    <div class="flex-1 p-3">
+    <main class="min-w-0 w-full flex-1 p-3 sm:p-4 md:p-6">
 
         <!-- Logout -->
         <div class="flex justify-end mb-4">
@@ -44,16 +44,16 @@
             </form>
         </div>
 
-        <h1 class="text-3xl font-bold mb-6">
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-bold mb-5 sm:mb-6 break-words">
             Dashboard IoT Irigasi Tetes
         </h1>
 
         <!-- Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4 mb-8 sm:mb-10 w-full min-w-0">
 
             <!-- Kelembapan Tanah -->
-            <div class="p-5 rounded-xl bg-gray-800 shadow-lg">
-                <h2 class="font-bold text-lg mb-1">
+            <div class="min-w-0 p-4 sm:p-5 rounded-xl bg-gray-800 shadow-lg">
+                <h2 class="text-xl sm:text-2xl font-bold mb-3">
                     Kelembapan Tanah
                 </h2>
 
@@ -63,8 +63,8 @@
             </div>
 
             <!-- Suhu -->
-            <div class="p-5 rounded-xl bg-gray-800 shadow-lg">
-                <h2 class="font-bold text-lg mb-1">
+            <div class="min-w-0 p-4 sm:p-5 rounded-xl bg-gray-800 shadow-lg">
+                <h2 class="text-xl sm:text-2xl font-bold mb-3">
                     Suhu Udara
                 </h2>
 
@@ -74,8 +74,8 @@
             </div>
 
             <!-- Kelembapan Udara -->
-            <div class="p-5 rounded-xl bg-gray-800 shadow-lg">
-                <h2 class="font-bold text-lg mb-1">
+            <div class="min-w-0 p-4 sm:p-5 rounded-xl bg-gray-800 shadow-lg">
+                <h2 class="text-xl sm:text-2xl font-bold mb-3">
                     Kelembapan Udara
                 </h2>
 
@@ -85,8 +85,8 @@
             </div>
 
             <!-- Jarak Air -->
-            <div class="p-5 rounded-xl bg-gray-800 shadow-lg">
-                <h2 class="font-bold text-lg mb-1">
+            <div class="min-w-0 p-4 sm:p-5 rounded-xl bg-gray-800 shadow-lg">
+                <h2 class="text-xl sm:text-2xl font-bold mb-3">
                     Jarak Permukaan Air
                 </h2>
 
@@ -96,8 +96,8 @@
             </div>
 
             <!-- Flow Rate -->
-            <div class="p-5 rounded-xl bg-gray-800 shadow-lg">
-                <h2 class="font-bold text-lg mb-1">
+            <div class="min-w-0 p-4 sm:p-5 rounded-xl bg-gray-800 shadow-lg">
+                <h2 class="text-xl sm:text-2xl font-bold mb-3">
                     Debit Air
                 </h2>
 
@@ -107,8 +107,8 @@
             </div>
 
             <!-- Status Katup -->
-            <div class="p-5 rounded-xl bg-gray-800 shadow-lg">
-                <h2 class="font-bold text-lg mb-1">
+            <div class="min-w-0 p-4 sm:p-5 rounded-xl bg-gray-800 shadow-lg">
+                <h2 class="text-xl sm:text-2xl font-bold mb-3">
                     Status Katup
                 </h2>
 
@@ -134,7 +134,7 @@
         </div>
 
         <!-- Status Sistem -->
-        <div class="p-5 rounded-xl bg-gray-800 shadow-lg mb-10">
+        <div class="min-w-0 p-4 sm:p-5 rounded-xl bg-gray-800 shadow-lg mb-10">
 
             <h2 class="text-2xl font-bold mb-3">
                 Status Sistem
@@ -187,7 +187,7 @@
             📜 Data Sensor Terakhir
         </h2>
 
-        <div class="log-wrapper overflow-x-auto bg-gray-800 rounded-xl shadow-lg p-4">
+        <div class="log-wrapper w-full max-w-full min-w-0 overflow-x-auto bg-gray-800 rounded-xl shadow-lg p-3 sm:p-4">
 
             <table class="w-full min-w-[650px] text-left">
 
@@ -262,9 +262,9 @@
 
             </table>
 
-        </div>
+        </div
 
-    </div>
+    </main>
 
 </div>
 

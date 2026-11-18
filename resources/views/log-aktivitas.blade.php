@@ -5,7 +5,7 @@
     <title>Log Aktivitas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src=""></script>
 </head>
 
 <body class="bg-slate-950 text-white">
